@@ -10,18 +10,18 @@ router.use(bodyParser.json());
 
 let trading = true
 if (trading){
-  const apiToken = 'eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI5Yjc4ZGNhNTYxZGE3ZTNjM2M4NTZhNTNkZTM0NTcwOCIsInBlcm1pc3Npb25zIjpbXSwiYWNjZXNzUnVsZXMiOlt7ImlkIjoidHJhZGluZy1hY2NvdW50LW1hbmFnZW1lbnQtYXBpIiwibWV0aG9kcyI6WyJ0cmFkaW5nLWFjY291bnQtbWFuYWdlbWVudC1hcGk6cmVzdDpwdWJsaWM6KjoqIl0sInJvbGVzIjpbInJlYWRlciIsIndyaXRlciJdLCJyZXNvdXJjZXMiOlsiKjokVVNFUl9JRCQ6KiJdfSx7ImlkIjoibWV0YWFwaS1yZXN0LWFwaSIsIm1ldGhvZHMiOlsibWV0YWFwaS1hcGk6cmVzdDpwdWJsaWM6KjoqIl0sInJvbGVzIjpbInJlYWRlciIsIndyaXRlciJdLCJyZXNvdXJjZXMiOlsiKjokVVNFUl9JRCQ6KiJdfSx7ImlkIjoibWV0YWFwaS1ycGMtYXBpIiwibWV0aG9kcyI6WyJtZXRhYXBpLWFwaTp3czpwdWJsaWM6KjoqIl0sInJvbGVzIjpbInJlYWRlciIsIndyaXRlciJdLCJyZXNvdXJjZXMiOlsiKjokVVNFUl9JRCQ6KiJdfSx7ImlkIjoibWV0YWFwaS1yZWFsLXRpbWUtc3RyZWFtaW5nLWFwaSIsIm1ldGhvZHMiOlsibWV0YWFwaS1hcGk6d3M6cHVibGljOio6KiJdLCJyb2xlcyI6WyJyZWFkZXIiLCJ3cml0ZXIiXSwicmVzb3VyY2VzIjpbIio6JFVTRVJfSUQkOioiXX0seyJpZCI6Im1ldGFzdGF0cy1hcGkiLCJtZXRob2RzIjpbIm1ldGFzdGF0cy1hcGk6cmVzdDpwdWJsaWM6KjoqIl0sInJvbGVzIjpbInJlYWRlciJdLCJyZXNvdXJjZXMiOlsiKjokVVNFUl9JRCQ6KiJdfSx7ImlkIjoicmlzay1tYW5hZ2VtZW50LWFwaSIsIm1ldGhvZHMiOlsicmlzay1tYW5hZ2VtZW50LWFwaTpyZXN0OnB1YmxpYzoqOioiXSwicm9sZXMiOlsicmVhZGVyIiwid3JpdGVyIl0sInJlc291cmNlcyI6WyIqOiRVU0VSX0lEJDoqIl19LHsiaWQiOiJjb3B5ZmFjdG9yeS1hcGkiLCJtZXRob2RzIjpbImNvcHlmYWN0b3J5LWFwaTpyZXN0OnB1YmxpYzoqOioiXSwicm9sZXMiOlsicmVhZGVyIiwid3JpdGVyIl0sInJlc291cmNlcyI6WyIqOiRVU0VSX0lEJDoqIl19LHsiaWQiOiJtdC1tYW5hZ2VyLWFwaSIsIm1ldGhvZHMiOlsibXQtbWFuYWdlci1hcGk6cmVzdDpkZWFsaW5nOio6KiIsIm10LW1hbmFnZXItYXBpOnJlc3Q6cHVibGljOio6KiJdLCJyb2xlcyI6WyJyZWFkZXIiLCJ3cml0ZXIiXSwicmVzb3VyY2VzIjpbIio6JFVTRVJfSUQkOioiXX1dLCJ0b2tlbklkIjoiMjAyMTAyMTMiLCJpbXBlcnNvbmF0ZWQiOmZhbHNlLCJyZWFsVXNlcklkIjoiOWI3OGRjYTU2MWRhN2UzYzNjODU2YTUzZGUzNDU3MDgiLCJpYXQiOjE2OTI2MjQwODJ9.bhWK5p5nwsFfavLUp3t1jc0-PlKcXD2y7FXm0aOQufiPVrbYXoHQqwTQWE-g7xyu3BVWnrLkhlsRC4YUSNxspD0ZgLG_b_BF57MdvpsVSBRrW0bTKKO3BqfUpVcVuIOfZCs3RxxvGwjDQ2NLxW-MKhlooPVi-t_aWSGtRTZqNRfR_3GYJi5IVfqlAzQQPPU-pBr6Mvn0kDbZBhlGhOHgXg7cLik7hBVpWs_r2Q4U_TTmuAIw51DroJ4KOqWdibxyWk5YnnE7MNttuqm9bM_LkCUnIDEjrp2lcuTNFffp1dUMWymZ2mfKpRGHYBf8A9EOPty47Ak1lZLDRuhXcGJXw-P4QHv2LXGB-yFjf1OnGzXulv8_KFdZFGbHdyBKKmE-DiXe-qVufDZMU9-WxtvNEnJdWBeV0MrWWlC1mvm8fhnhnE_-xzFs2NDfN6KI5HV-GlAGFm7nt_l3zuKUDytUy49hldHA-P1jQuOoCn4t6hodRGg5tuYvL0GjXUybM78NC6H-n6VKg5cMEiEEO29UB80gDC7eoo_910YEoFK5055rsrdM3apfYTIBU2hLcnek5VW0rnbQNDgTWyLS9oBYsTT0peUYFiIvbiQKtzddSCF67Ic_Mp2i__g0ILY2NyUOJHRoMGMzbeovKRHJ0amWBUwpzrTqPR3PRLKA7qzRIK0';
-  const mtLogin = '891088898';
-  const mtPassword = 'VozGoYX3';
-  const brokerServer = 'VantageInternational-Demo'
-  const accountName = "Test95"
-  const serviceName = "TraderTest"
-  const endpointPassword = "TX"
+  const apiToken = '????';
+  const mtLogin = '????';
+  const mtPassword = '????';
+  const brokerServer = '????'
+  const accountName = "????"
+  const serviceName = "????"
+  const endpointPassword = "????"
   const asset = "XAUUSD"
-  const DBusername = "franciscoT95";
-  const DBpassword = "ft95";
-  const databaseName = "TestILL"
-  const collectionName = "CollectionTest"
+  const DBusername = "????";
+  const DBpassword = "????";
+  const databaseName = "If no previous, given name will create new."
+  const collectionName = "If no previous, given name will create new."
   
   // RECOMMENDATIONS
   // Do not use timers below 15 seconds on RPC or Websocket calls, you'll over spend credits also causing API server overload.

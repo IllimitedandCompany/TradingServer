@@ -19,8 +19,8 @@ if (trading){
   const asset = "????"
   const DBusername = "????";
   const DBpassword = "????";
-  const databaseName = "If no match, given name will create new."
-  const collectionName = "If no match, given name will create new."
+  const databaseName = "If no previous, given name will create new."
+  const collectionName = "If no previous, given name will create new."
   
   // RECOMMENDATIONS
   // Do not use timers below 15 seconds on RPC or Websocket calls, you'll over spend credits also causing API server overload.
