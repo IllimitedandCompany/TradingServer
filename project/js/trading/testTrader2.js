@@ -377,7 +377,7 @@ if (trading){
     }
   }
   
-  app.post(`/metatrader/webhook/${accountName}/exit/:side/:pw`, async (req, res) => {
+  router.post(`/metatrader/webhook/${accountName}/exit/:side/:pw`, async (req, res) => {
     let pw = req.params.pw;
     let sid = req.params.side;
     let side = sid.toUpperCase();
@@ -431,7 +431,7 @@ if (trading){
     }
   });
   
-  app.post(`/metatrader/webhook/${accountName}/entry/:side/:pw`, async (req, res) => {
+  router.post(`/metatrader/webhook/${accountName}/entry/:side/:pw`, async (req, res) => {
     let sl = 0
     let sid = req.params.side;
     let side = sid.toUpperCase();
