@@ -7,7 +7,6 @@ const time = require(__dirname+'/js/time/date.js');
 
 // Trading Requires
 const test1Routes = require(__dirname + '/js/trading/testTrader1.js');
-const test2Routes = require(__dirname + '/js/trading/testTrader2.js');
 
 module.exports = app;
 
@@ -18,7 +17,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // Trading Routes
 app.use(test1Routes);
-app.use(test2Routes);
 
 app.set("views",__dirname + '/html');
 app.set('view engine', 'ejs');

@@ -3,26 +3,27 @@ const router = express.Router();
 const MetaApi = require('metaapi.cloud-sdk').default;
 const bodyParser= require('body-parser');
 const db = require('./../database/mongodb');
-const mtdb = db.client.db("Trading").collection("TradingOrders");
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
 let trading = true
 if (trading){
-  const apiToken = '????';
-  const mtLogin = '????';
-  const mtPassword = '????';
-  const brokerServer = '????'
-  const accountName = "????"
-  const serviceName = "????"
-  const endpointPassword = "????"
+  const apiToken = "0000000";
+  const mtLogin = "0000000";
+  const mtPassword = "0000000";
+  const brokerServer = "0000000"
+  const accountName = "0000000"
+  const serviceName = "0000000"
+  const endpointPassword = "0000000"
   const asset = "XAUUSD"
-  const DBusername = "????";
-  const DBpassword = "????";
-  const databaseName = "If no previous, given name will create new."
-  const collectionName = "If no previous, given name will create new."
-  
+  const databaseName = "IfNoPreviousGivenNameWillCreateNew"
+  const collectionName = "IfNoPreviousGivenNameWillCreateNew"
+  const mtdb = db.client.db(databaseName).collection(collectionName);
+
+  const entryHook = `/metatrader/webhook/${accountName}/exit/:side/:pw`
+  const exitHook = `/metatrader/webhook/${accountName}/entry/:side/:pw`
+
   // RECOMMENDATIONS
   // Do not use timers below 15 seconds on RPC or Websocket calls, you'll over spend credits also causing API server overload.
     
@@ -378,7 +379,7 @@ if (trading){
     }
   }
   
-  router.post(`/metatrader/webhook/${accountName}/exit/:side/:pw`, async (req, res) => {
+  router.post(exitHook, async (req, res) => {
     let pw = req.params.pw;
     let sid = req.params.side;
     let side = sid.toUpperCase();
@@ -432,7 +433,7 @@ if (trading){
     }
   });
   
-  router.post(`/metatrader/webhook/${accountName}/entry/:side/:pw`, async (req, res) => {
+  router.post(entryHook, async (req, res) => {
     let sl = 0
     let sid = req.params.side;
     let side = sid.toUpperCase();
