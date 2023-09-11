@@ -1,0 +1,37 @@
+{
+	"name": "TradingServer",
+	"version": "1.0.0",
+	"description": "Cloud Ready Automatic Trading Server, provided by Illimited&Co",
+	"main": "project/start.js",
+	"scripts": {
+		"start": "nodemon project/start.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.20.2",
+		"cookie-parser": "^1.4.6",
+		"ejs": "^3.1.9",
+		"express": "^4.18.2",
+		"metaapi.cloud-sdk": "^23.1.1",
+		"mongodb": "^4.16.0",
+		"nodemon": "^2.0.22"
+	},
+	"engines": {
+		"node": ">=16.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/IllimitedandCompany"
+	},
+	"keywords": [
+		"node",
+		"heroku",
+		"express",
+		"mongodb",
+		"trading",
+		"body-parser",
+		"T",
+		"TFT",
+		"Illimited&Co"
+	],
+	"license": "MIT"
+}

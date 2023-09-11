@@ -1,0 +1,8 @@
+{
+  "name": "HQ",
+  "description": "HQ",
+  "repository": "na",
+  "logo": "",
+  "keywords": ["node", "express", "static", "mongodb"],
+  "image": "heroku/nodejs"
+}
