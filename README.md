@@ -26,6 +26,12 @@ Simply download the whole project, check the project folder for hidden files, an
 #### 3. Find and open your terminal 
 The terminal is a basic way of interacting with your computer through text commands. It'll be very useful in setting your application up. On Windows, it might be called Command Prompt, Git Shell, or Git BASH.
 
+```
+	WIN+R
+	CMD (and press enter)
+```
+
+
 <img width="115" alt="screen shot 2017-04-21 at 11 43 48 am" src="https://cloud.githubusercontent.com/assets/17851174/25285319/ce48dafe-2687-11e7-9fba-3262f406235f.png">
 
 #### 4. Use the command line to navigate to your desktop:
