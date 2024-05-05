@@ -137,7 +137,7 @@ There are plenty of different and more comprehensive tutorials and online resour
 - <a href="https://cssreference.io/" target="_blank">CSS visual guide</a>
 - <a href="http://flexboxfroggy.com/" target="_blank">Flexbox tutorial</a>
 - <a href="http://www.hostingreviewbox.com/html5-cheat-sheet/" target="_blank">HTML cheatsheet</a>
-- <a href="https://www.freecodecamp.org/" target="_blank">Information Depot (Web Development Assistance)</a>
+- <a href="https://github.com/IllimitedandCompany/InformationDepot" target="_blank">Information Depot (Web Development Assistance)</a>
 
 **Inspiration and problem solving**
 To practice your problem solving skills and find some inspiration, please check the following pages: 
