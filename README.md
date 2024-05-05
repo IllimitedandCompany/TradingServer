@@ -148,7 +148,7 @@ There are plenty of different and more comprehensive tutorials and online resour
 
 **Inspiration and problem solving**
 To practice your problem solving skills and find some inspiration, please check the following pages: 
-- [StackOverflow](https://stackoverflow.com/) is a great place to ask any question (or search for it first, because it’s very likely that someone has already asked the same question and got an answer :))
-- [Code Pen](https://codepen.io/) is a great source of inspiration with a lot of projects based on HTML, CSS and JavaScript
+- [StackOverflow](https://stackoverflow.com/) is a great place to ask any question (or search for it first, because it’s very likely that someone has already asked the same question and got an answer.
+- [Code Pen](https://codepen.io/) is a great source of inspiration with a lot of projects based on HTML, CSS and JavaScript.
 - [Dev.to](https://dev.to/) is a blog platform where you can find plenty of useful posts from other developers.
 
