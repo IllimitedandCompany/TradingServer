@@ -45,7 +45,6 @@ Then, use the `ls` (on Mac) or `dir` (on Windows) command to list all files in a
 
 #### 5. Initialize the app for Heroku
 Use the command line to create an app on Heroku. Heroku is the server you'll be pushing your code to. This prepares Heroku to receive your source code (and creates a url for you):
-_Once again, be sure to run these lines one at a time, pressing enter after each command_
 ```
 	heroku login
 	heroku create
