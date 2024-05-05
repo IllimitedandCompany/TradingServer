@@ -11,7 +11,7 @@ But first, there are a few accounts you’ll need to set up and technologies you
 - [ ] Create a <a href="https://github.com/join" target="_blank">GitHub account</a>
 - [ ] Create a <a href="https://www.mongodb.com/cloud/atlas/register" target="_blank">MongoDB Atlas account</a>
 - [ ] Download and install <a href="https://help.github.com/articles/set-up-git/#setting-up-git" target="_blank">git (GitHub's command line tool)</a>
-- [ ] Download and install <a href="https://desktop.github.com/" target="_blank">Github Desktop (will facilitate your git usage by allowing you to work in a more interactive way)</a>
+- [ ] Download and install <a href="https://desktop.github.com/" target="_blank">Github Desktop (will facilitate your git usage by allowing you to work in a more intuitive way)</a>
 - [ ] Download and install <a href="https://nodejs.org/en/download/" target="_blank">Node.js</a>
 - [ ] Download and install a text editor (we recommend <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>)
 - [ ] Create an account with a trusted broker (we recommend <a href="https://www.vantagemarkets.com/login/" target="_blank">Vantage</a> or <a href="https://www.puprime.com/" target="_blank">PU Prime</a>)
