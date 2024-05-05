@@ -94,7 +94,7 @@ For this App to work properly you'll need to change the following variables in t
 #### 10. Push that change to GitHub, which will automatically deploy to Heroku (Github Desktop)
 
  - Login to Github using Github Desktop
- - Access the repo on your Github account or create a new with the "git init ." shown on step 2.
+ - Access the repo on your Github account or create a new with the "git init ." (shown on step 2).
  - Give the 'head' a name(update info), and commit to master and/or push origin or publish repository.
 
 Any updates on Visual Studio Code will need to be pushed to origin using Github Desktop, only once commited and pushed will they be active due to 'Automatic Deployment'
