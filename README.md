@@ -63,7 +63,7 @@ you'll soon be able to see your App online.)
 If you experience any issues with using Heroku on the command line, please refer to [this documentation] (https://devcenter.heroku.com/articles/heroku-cli#troubleshooting) and your error log file.
 
 #### 6. Install the dependencies
-Dependencies are all the outside pieces of code your app needs to run. Install the project’s dependencies using npm, a tool used to install any other packages your project needs. View the dependencies your app needs [here](https://github.com/HubSpot/BaseWebApp/blob/master/package.json). 
+Dependencies are all the outside pieces of code your app needs to run. Install the project’s dependencies using npm, a tool used to install any other packages your project needs. View the dependencies your app needs [here](https://github.com/IllimitedandCompany/TradingServer/blob/master/package.json). 
 ```
 	npm install 
 ```
