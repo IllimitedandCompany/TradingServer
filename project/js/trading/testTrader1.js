@@ -41,60 +41,58 @@ if (trading){
   let terminalState;
   
   // Connects via RPC for order creation, but using websocket stream for asset price fetch.
-  async function traderLogin() {
-    try {
-      accounts = await api.metatraderAccountApi.getAccounts();
-      account = accounts.find(a => a.login === mtLogin && a.type.startsWith('cloud'));
-      
-      if (!account) {
-        console.log('Adding MT4 account to MetaApi');
-        account = await api.metatraderAccountApi.createAccount({
-          name: 'Test account',
-          type: 'cloud',
-          login: mtLogin,
-          password: mtPassword,
-          server: brokerServer,
-          platform: 'mt4',
-          magic: 1000
-        });
-      } else {
-        console.log('MT4 account already added to MetaApi');
-      }
-  
+async function traderLogin() {
+  try {
+    accounts = await api.metatraderAccountApi.getAccountsWithInfiniteScrollPagination();
+    account = accounts.find(a => a.login === mtLogin && a.type.startsWith('cloud'));
+
+    // If its the first time doing it, set 'notDeployed' to true, run it once and then set it back to False.
+    let notDeployed = false
+    if (!account && notDeployed) {
+      console.log('Adding MT5 account to MetaApi');
+      account = await api.metatraderAccountApi.createAccount({
+        name: 'MT5 account',
+        type: 'cloud',
+        login: mtLogin,
+        password: mtPassword,
+        server: brokerServer,
+        platform: 'mt5',
+        magic: 1000
+      });
       await account.deploy();
-      await account.waitConnected();
-  
-      connection = account.getRPCConnection();
-      await connection.connect();
-      await connection.waitSynchronized();
-  
-      connectionS = account.getStreamingConnection();
-      await connectionS.connect();
-  
-      await connectionS.waitSynchronized();
-      
-      await connectionS.subscribeToMarketData(`${asset}`);
-      
-      terminalState = connectionS.terminalState;
-      console.log(`(Trading live,  ${accountName} Logged and ready.`);
-  
-      // Requires Database function implementation
-      setTimeout(startNew, 10000);
-      
-    } catch (error) {
-      if(error.details) {
-        if(error.details === 'E_SRV_NOT_FOUND') {
-          console.error(error);
-        } else if (error.details === 'E_AUTH') {
-          console.log(error, `\n ${accountName} encountered an error.`);;
-        } else if (error.details === 'E_SERVER_TIMEZONE') {
-          console.log(error, `\n ${accountName} encountered an error.`);;
-        }
-      }
-      console.error(error);
+    } else {
+      console.log('MT5 account already added to MetaApi');
     }
-  
-  }traderLogin();
+    await account.waitConnected();
+
+    connection = account.getRPCConnection();
+
+    await connection.connect();
+    await connection.waitSynchronized();
+    
+    connectionS = account.getStreamingConnection();
+
+    await connectionS.connect();
+    await connectionS.waitSynchronized();
+    await connectionS.subscribeToMarketData(`BTCUSD`);
+    terminalState = connectionS.terminalState;
+    console.log(`Trading live,  ${accountName} Logged and ready.`);
+
+    setTimeout(startNew, 10000);
+
+  } catch (error) {
+    if(error.details) {
+      if(error.details === 'E_SRV_NOT_FOUND') {
+        console.error(error);
+      }else if(error.details === 'E_AUTH') {
+        console.log(error, `\n ${accountName} encountered an error.`);;
+      }else if(error.details === 'E_SERVER_TIMEZONE') {
+        console.log(error, `\n ${accountName} encountered an error.`);;
+      }
+    }
+    console.error(error);
+  }
+}traderLogin();
   
   async function startNew(){
     let y = []
