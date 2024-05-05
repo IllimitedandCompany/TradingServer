@@ -1,6 +1,6 @@
 # Trading Server
 
-Today, we’ll get you up and running with a server/web application that you’ll then be able to build off of..
+Let's get you up and running with a server/web application that you’ll then be able to build off of..
 But first, there are a few accounts you’ll need to set up and technologies you’ll need to install on your computer.
 
 ## Part One: Getting the code on your machine
