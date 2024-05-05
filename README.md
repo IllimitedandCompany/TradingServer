@@ -69,7 +69,8 @@ Dependencies are all the outside pieces of code your app needs to run. Install t
 ```
 (By entering "npm install" or "npm i" not followed by a specific module, NPM will check your dependencies on Package.json and install them accordingly.)
 
-#### 7. Run the project on your machine (travel to the project folder and enter:)
+#### 7. Run the project on your machine
+(by traveling to the project using cd(change directory*))(shown in step 4)
 ```
 	npm start	
 ```
