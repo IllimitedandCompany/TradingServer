@@ -25,7 +25,7 @@ if (trading){
   const exitHook = `/metatrader/webhook/${accountName}/entry/:side/:pw`
 
   // RECOMMENDATIONS
-  // Do not use timers below 15 seconds on RPC or Websocket calls, you'll over spend credits also causing API server overload.
+  // Do not use timers below 15 seconds on RPC, you'll over spend credits also causing API server overload.
     
   // FIlter used in Database calls
   const filter = { "service": `${serviceName}` };
@@ -310,7 +310,7 @@ async function traderLogin() {
   async function reconnect(){
     try{
       await connection.connect();
-      console.log(`${accountName` reconnected.)
+      console.log(`${accountName} reconnected.`)
       return
     }catch(error){
       console.log("Error retrying connection.")
@@ -564,6 +564,7 @@ async function traderLogin() {
   }
   
   // As per recommended, do not use a timer under 15 seconds to avoid API server overload
+  // Websockets are exception, terminal state specifically can be queried as many times as needed.
   setInterval(trailPrice, 20000);
 }
 
