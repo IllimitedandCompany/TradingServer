@@ -1,3 +1,5 @@
+// Trading server V1.1 (Should be having an update until the end of 2024)
+
 const express = require('express');
 const router = express.Router();
 const MetaApi = require('metaapi.cloud-sdk').default;
