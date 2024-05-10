@@ -310,7 +310,7 @@ async function traderLogin() {
   async function reconnect(){
     try{
       await connection.connect();
-      console.log("test2- Reconnected.")
+      console.log(`${accountName` reconnected.)
       return
     }catch(error){
       console.log("Error retrying connection.")
