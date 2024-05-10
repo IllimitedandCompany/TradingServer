@@ -333,7 +333,7 @@ async function traderLogin() {
             comment: 'comm'
         });
       }catch(error){
-        console.log(error, "\n test2 encountered an error.");
+        console.log(error, `\n ${accountName} encountered an error.`);
       }
     }else if(side === "SELL"){
       try{
@@ -341,7 +341,7 @@ async function traderLogin() {
           comment: 'comm'
         });
       }catch(error){
-        console.log(error, "\n test2 encountered an error.");
+        console.log(error, `\n ${accountName} encountered an error.`);
       }
     }
   }
@@ -351,7 +351,7 @@ async function traderLogin() {
       connection.closePosition(orderId);
       removeClosed(orderId)
     }catch(error){
-      console.log(error, "\n test2 encountered an error.");
+      console.log(error, `\n ${accountName} encountered an error.`);
     }
   }
   
@@ -403,7 +403,7 @@ async function traderLogin() {
                   console.log("Order closed: ", orderIdToClose)
                   removeClosed(orderIdToClose);
                 }catch(error){
-                  console.log(error, "\n test2 encountered an error.");
+                  console.log(error, `\n ${accountName} encountered an error.`);
                 }
               } else {
                 console.log(`No ${side} order to close.`);
@@ -513,7 +513,7 @@ async function traderLogin() {
       let y = await connection.getPositions()
   
       if(y.length === 0){
-        console.log("(TEST2) No live orders.")
+        console.log(`${accountName} No live orders.`)
         return
       }
     
