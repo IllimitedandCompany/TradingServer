@@ -48,7 +48,7 @@ async function traderLogin() {
     accounts = await api.metatraderAccountApi.getAccountsWithInfiniteScrollPagination();
     account = accounts.find(a => a.login === mtLogin && a.type.startsWith('cloud'));
 
-    // If its the first time doing it, set 'notDeployed' to true, run it once and then set it back to False.
+    // If its the first time using an account, start the server with "notDeployed" to true, let it add account, and then change it back to 'false' and restart the server.
     let notDeployed = false
     if (!account && notDeployed) {
       console.log('Adding MT5 account to MetaApi');
